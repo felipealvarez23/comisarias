@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class CreatePMReply {
-    private CreatePMDataReply data;
-    private ErrorReply error;
+public class ErrorReply {
+    private String code;
+    private String description;
 }
