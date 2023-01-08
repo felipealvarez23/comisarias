@@ -26,4 +26,4 @@ jobs:
           arguments: publish
           build-root-directory: lib_commons_comisarias
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.JAVA_TOKEN }}
