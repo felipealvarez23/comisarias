@@ -23,5 +23,6 @@ jobs:
         with:
           arguments: publish
           build-root-directory: lib_commons_comisarias
+          gradle-executable: lib_commons_comisarias/gradle
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
