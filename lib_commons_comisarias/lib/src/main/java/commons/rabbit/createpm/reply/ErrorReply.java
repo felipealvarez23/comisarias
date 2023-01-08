@@ -13,4 +13,5 @@ public class ErrorReply {
     private String code;
     private String description;
     private String severity;
+    private String any;
 }
