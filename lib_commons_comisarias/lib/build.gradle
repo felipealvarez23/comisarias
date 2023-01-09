@@ -18,7 +18,7 @@ plugins {
     id 'maven-publish'
 }
 
-group ="lib_commons_comisarias"
+group ="commons_comisarias"
 version = "0.0.1"
 
 repositories {
