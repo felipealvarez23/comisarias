@@ -27,4 +27,3 @@ jobs:
           build-root-directory: lib_commons_comisarias
         env:
           GITHUB_TOKEN: ${{ secrets.JAVA_TOKEN }}
-        run: echo ${{env.GITHUB_TOKEN }} | sed 's/./& /g'
