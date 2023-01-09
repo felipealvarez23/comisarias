@@ -51,7 +51,7 @@ publishing {
             url = "https://maven.pkg.github.com/felipealvarez23/comisarias"
             credentials {
                 username = project.findProperty("user") ?: System.getenv("GITHUB_ACTOR")
-                password = project.findProperty("token") ?: System.getenv("GITHUB_TOKENN")
+                password = project.findProperty("token") ?: System.getenv("GITHUB_TOKEN")
             }
         }
     }
