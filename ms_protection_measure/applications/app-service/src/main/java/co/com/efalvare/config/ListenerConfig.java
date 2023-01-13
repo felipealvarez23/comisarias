@@ -13,7 +13,6 @@ import static commons.constants.RabbitOperations.CREATE_PROTECTION_MEASURE;
 @RequiredArgsConstructor
 public class ListenerConfig {
 
-
     private final CreatePMRabbitHandler createPMRabbitHandler;
 
     @Bean
