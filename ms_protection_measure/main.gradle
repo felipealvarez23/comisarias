@@ -6,8 +6,8 @@ allprojects {
         maven {
             url = uri("https://maven.pkg.github.com/felipealvarez23/comisarias")
             credentials {
-                username = System.getenv("GITHUB_TOKEN")
-                password = System.getenv("GITHUB_USERNAME")
+                username = project.findProperty("token") ?: System.getenv("GITHUB_TOKEN")
+                password = project.findProperty("user") ?: System.getenv("GITHUB_USERNAME")
             }
         }
     }
