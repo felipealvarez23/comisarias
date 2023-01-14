@@ -16,7 +16,4 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x ms_protection_measure/gradlew
       - name: Unit test
-        env:
-          GITHUB_TOKEN: ${{ secrets.JAVA_TOKEN }}
-          GITHUB_USERNAME: ${{ secrets.JAVA_ACTOR }}
         run: ./ms_protection_measure/gradlew -p ms_protection_measure clean build jacocoMergedReport
