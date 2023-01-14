@@ -16,7 +16,7 @@ public class CreatePMRabbitHandler {
     private final ProtectionMeasureUseCase useCase;
 
     public Mono<CreatePMReply> createPM(CreatePMQuery query) {
-        log.info("Rabbit request operation [create-protection_measure] received");
+        log.info("Rabbit request operation [create-protection-measure] received");
         return Mono.empty();
     }
 
