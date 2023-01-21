@@ -33,6 +33,8 @@ subprojects {
         annotationProcessor  "org.projectlombok:lombok:${lombokVersion}"
         testCompileOnly  "org.projectlombok:lombok:${lombokVersion}"
         testAnnotationProcessor  "org.projectlombok:lombok:${lombokVersion}"
+        compileOnly "org.mapstruct:mapstruct:${mapstructVersion}", 'org.projectlombok:lombok'
+        annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}", 'org.projectlombok:lombok'
         implementation platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
 
         // lib_commons_comisarias

@@ -10,10 +10,10 @@ import lombok.Setter;
 public class ApiError extends Exception {
     private String title;
     private String code;
-    private String message;
-    public ApiError(String title, String code, String message) {
-        super(message);
-        this.message = message;
+    private String description;
+    public ApiError(String title, String code, String description) {
+        super(description);
+        this.description = description;
         this.title = title;
         this.code = code;
     }
