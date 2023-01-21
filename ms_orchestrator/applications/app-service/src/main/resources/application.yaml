@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: "dev-local"
+    include: null
+  application:
+    name: "ms_orchestrator"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev-local
+server:
+  port: 8082
+aws:
+  dynamodb:
+    endpoint: "http://localhost:8000"
+    accessKey: "DUMMYIDEXAMPLE"
+    secretAccessKey: "DUMMYEXAMPLEKEY"
+    region: "us-east-1"
+    threads: "10"
+
+rabbit:
+  host: localhost
+  port: 5672
+  username: user
+  password: bitnami
+  secret:
+    region: "us-east-1"
+    name: ""
