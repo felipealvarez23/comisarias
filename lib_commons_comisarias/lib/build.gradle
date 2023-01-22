@@ -19,7 +19,7 @@ plugins {
 }
 
 group ="commons_comisarias"
-version = "0.0.2"
+version = "0.0.3"
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -50,8 +50,8 @@ publishing {
             name = "GitHubPackages"
             url = "https://maven.pkg.github.com/felipealvarez23/comisarias"
             credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
+                username = project.findProperty("user") ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("token") ?: System.getenv("GITHUB_TOKEN")
             }
         }
     }

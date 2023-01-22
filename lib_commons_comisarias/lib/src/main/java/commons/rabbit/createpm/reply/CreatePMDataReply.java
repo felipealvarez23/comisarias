@@ -11,5 +11,6 @@ import lombok.NoArgsConstructor;
 @Builder(toBuilder = true)
 public class CreatePMDataReply {
     private String protectionMeasureId;
+    private String step;
     private String type;
 }
