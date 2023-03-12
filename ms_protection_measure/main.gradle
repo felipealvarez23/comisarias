@@ -46,6 +46,7 @@ subprojects {
     jacocoTestReport {
         dependsOn test
         reports {
+            xml.setEnabled true
             xml.setRequired true
             xml.setOutputLocation file("${buildDir}/reports/jacoco.xml")
             csv.setRequired false
