@@ -38,7 +38,7 @@ subprojects {
         implementation platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
 
         // lib_commons_comisarias
-        implementation 'commons_comisarias:lib:0.0.2'
+        implementation "commons_comisarias:lib:${commonsComisarias}"
     }
 
     test.finalizedBy(project.tasks.jacocoTestReport)
