@@ -6,6 +6,7 @@ buildscript {
 		jacocoVersion = '0.8.8'
         lombokVersion = '1.18.24'
         mapstructVersion = '1.4.2.Final'
+        commonsComisarias = '0.0.3'
 	}
 }
 
