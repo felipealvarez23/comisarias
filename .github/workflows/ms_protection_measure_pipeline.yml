@@ -20,6 +20,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.JAVA_TOKEN }}
           GITHUB_USERNAME: ${{ secrets.JAVA_ACTOR }}
         run: ./ms_protection_measure/gradlew -p ms_protection_measure clean build jacocoMergedReport
+      - name: List files
+        run: ls -a
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
