@@ -26,4 +26,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./ms_protection_measure/gradlew -p ms_protection_measure clean build jacocoMergedReport sonarqube --info
+        run: ./ms_protection_measure/gradlew -p ms_protection_measure sonar --info
