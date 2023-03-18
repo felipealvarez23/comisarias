@@ -21,7 +21,7 @@ public class CreatePMRabbitHandler {
     private final ProtectionMeasureMapper mapper;
 
     public Mono<CreatePMReply> createPM(CreatePMQuery query) {
-        log.info("Rabbit request operation [createPM] received");
+        log.info("Start execution [createPM] operation: [{}]", query);
         return Mono.just(query)
                 .map(CreatePMQuery::getData)
                 .map(mapper::mapperToProtectionMeasure)
