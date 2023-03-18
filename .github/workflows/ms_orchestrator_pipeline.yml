@@ -17,7 +17,7 @@ jobs:
         with:
           java-version: 11
       - name: Grant execute permission for gradlew
-        run: chmod +x ms_protection_measure/gradlew
+        run: chmod +x $PROJECT_NAME/gradlew
       - name: Unit test
         env:
           GITHUB_TOKEN: ${{ secrets.JAVA_TOKEN }}
