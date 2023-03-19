@@ -14,6 +14,8 @@ spring:
       on-profile: dev-local
 server:
   port: 8082
+app:
+  allowedOrigins: "http://localhost:4200"
 aws:
   dynamodb:
     endpoint: "http://localhost:8000"
