@@ -46,11 +46,10 @@ subprojects {
     jacocoTestReport {
         dependsOn test
         reports {
-            xml.enabled(true)
-            xml.setRequired true
-            xml.setOutputLocation file("${buildDir}/reports/jacoco.xml")
-            csv.setRequired false
-            html.setOutputLocation file("${buildDir}/reports/jacocoHtml")
+            xml.enabled true
+            xml.destination file("${buildDir}/reports/jacoco.xml")
+            csv.enabled false
+            html.destination file("${buildDir}/reports/jacocoHtml")
         }
     }
 
@@ -68,10 +67,9 @@ task jacocoMergedReport(type: JacocoReport) {
     classDirectories.setFrom files(subprojects.sourceSets.main.output)
     executionData.setFrom project.fileTree(dir: '.', include: '**/build/jacoco/test.exec')
     reports {
-        xml.enabled(true)
-        xml.setRequired true
-        csv.setRequired false
-        html.setRequired true
+        xml.enabled true
+        csv.enabled false
+        html.enabled true
     }
 }
 
