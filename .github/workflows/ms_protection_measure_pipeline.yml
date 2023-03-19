@@ -4,6 +4,9 @@ on:
       - master
     paths:
       - 'ms_protection_measure/**'
+env:
+  COMPONENT_NAME: 'ms_protection_measure'
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -19,11 +22,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.JAVA_TOKEN }}
           GITHUB_USERNAME: ${{ secrets.JAVA_ACTOR }}
-        run: ./ms_protection_measure/gradlew -p ms_protection_measure clean build jacocoMergedReport
+        run: ./$COMPONENT_NAME/gradlew -p $COMPONENT_NAME clean build jacocoMergedReport
       - name: List files
         run: ls -R
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./ms_protection_measure/gradlew -p ms_protection_measure sonar --info
+        run: ./$COMPONENT_NAME/gradlew -p $COMPONENT_NAME clean build jacocoMergedReport sonar --info
