@@ -31,7 +31,7 @@ public class CreatePMRabbitHandler {
                 .onErrorResume(ProtectionMeasureException.class, this::buildErrorResponse);
     }
 
-    public Mono<CreatePMReply> buildErrorResponse(ProtectionMeasureException error) {
+    private Mono<CreatePMReply> buildErrorResponse(ProtectionMeasureException error) {
         return Mono.just(CreatePMReply.builder()
                 .error(ErrorReply.builder()
                         .code(error.getCode())
