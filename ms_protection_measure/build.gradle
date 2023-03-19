@@ -3,7 +3,7 @@ buildscript {
 		cleanArchitectureVersion = '2.4.5'
 		springBootVersion = '2.7.3'
 		sonarVersion = '3.5.0.2730'
-		jacocoVersion = '0.8.5'
+		jacocoVersion = '0.8.8'
         lombokVersion = '1.18.24'
         mapstructVersion = '1.4.2.Final'
         commonsComisarias = '0.0.3'
@@ -24,7 +24,7 @@ sonarqube {
         property "sonar.modules", "${modules.join(',')}"
         property "sonar.sources", "src,deployment,settings.gradle,main.gradle,build.gradle,${modules.collect { "${it}/build.gradle" }.join(',')}"
         property "sonar.projectBaseDir", "ms_protection_measure"
-        property "sonar.test", ""
+        property "sonar.test", "src/test"
         property "sonar.java.binaries", ""
         property "sonar.junit.reportsPath", ""
         property "sonar.java.coveragePlugin", "jacoco"
