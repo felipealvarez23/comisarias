@@ -23,3 +23,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.JAVA_TOKEN }}
           GITHUB_USERNAME: ${{ secrets.JAVA_ACTOR }}
         run: ./$PROJECT_NAME/gradlew -p $PROJECT_NAME clean build jacocoMergedReport
+      - name: Build and analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: ./$PROJECT_NAME/gradlew -p $PROJECT_NAME sonar --info
