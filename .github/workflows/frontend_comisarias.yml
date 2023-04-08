@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'frontend_comisarias/**'
+jobs:
+  test:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+    container:
+      image: node:16-buster
+      options: --user root
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Tests
+        run: npm run test
