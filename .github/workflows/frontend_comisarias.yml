@@ -4,6 +4,9 @@ on:
       - master
     paths:
       - 'frontend_comisarias/**'
+env:
+  COMPONENT_NAME: 'frontend_comisarias'
+
 jobs:
   test:
     name: Run Unit Tests
@@ -15,6 +18,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install Dependencies
-        run: npm install
+        run: npm i --prefix ./$COMPONENT_NAME/
       - name: Run Tests
-        run: npm run test
+        run: npm test --prefix ./$COMPONENT_NAME/
