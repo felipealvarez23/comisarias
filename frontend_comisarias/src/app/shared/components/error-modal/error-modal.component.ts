@@ -20,9 +20,11 @@ export class ErrorModalComponent implements OnInit {
   constructor(private errorModalService: ErrorModalService) {}
 
   ngOnInit(): void {
-    this.modal = new window.bootstrap.Modal(
-      document.getElementById("errorModal")
-    );
+    if (window.bootstrap && window.bootstrap.Modal) {
+      this.modal = new window.bootstrap.Modal(
+        document.getElementById("errorModal")
+      );
+    }
     this.errorModalService.failListener()
       .pipe(filter(response => response != null ))
       .subscribe(error => {
