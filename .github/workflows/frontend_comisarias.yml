@@ -32,7 +32,7 @@ jobs:
         run: npm test --prefix ./$COMPONENT_NAME/
 
       - name: Build
-        run: npm run build:prod
+        run: npm run build:prod --prefix ./$COMPONENT_NAME/
 
       - name: Deploy
         if: success()
