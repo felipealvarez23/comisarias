@@ -17,9 +17,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - run: |
-          git config --global user.email "felipealvarez23@outlook.com"
-          git config --global user.name "felipealvarez23"
       - name: Install Dependencies
         run: npm i --prefix ./$COMPONENT_NAME/
       - name: Run Tests
@@ -30,4 +27,4 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: frontend-comisarias
           heroku_email: felipealvarez23@outlook.com
-          appdir: frontend_comisarias
+          appdir: frontend_comisarias/
