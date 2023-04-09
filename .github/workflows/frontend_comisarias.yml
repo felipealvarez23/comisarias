@@ -31,6 +31,9 @@ jobs:
       - name: Run Tests
         run: npm test --prefix ./$COMPONENT_NAME/
 
+      - name: Build
+        run: npm run build:prod
+
       - name: Deploy
         if: success()
         run: aws s3 sync ./$COMPONENT_NAME/dist/$COMPONENT_NAME s3://frontend-comisarias
