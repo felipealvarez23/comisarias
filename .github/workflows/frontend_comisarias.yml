@@ -36,5 +36,5 @@ jobs:
 
       - name: Deploy
         if: success()
-        run: aws s3 sync ./$COMPONENT_NAME/dist/$COMPONENT_NAME s3://frontend-comisarias
+        run: aws s3 sync ./$COMPONENT_NAME/dist/$COMPONENT_NAME s3://frontend-comisarias/
 
