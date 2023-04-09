@@ -20,4 +20,13 @@ jobs:
       - name: Install Dependencies
         run: npm i --prefix ./$COMPONENT_NAME/
       - name: Run Tests
-        run: npm test --prefix ./$COMPONENT_NAME/
+        run: npm run build --prod --prefix ./$COMPONENT_NAME/
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: "frontend-comisarias"
+          heroku_email: "felipealvarez23@outlook.com"
+          buildpack_name: "heroku/nodejs"
+          branch_name: "main"
+          folder_path: "./frontend_comisarias/dist/frontend_comisarias"
