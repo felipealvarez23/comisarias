@@ -21,11 +21,6 @@ jobs:
         run: npm i --prefix ./$COMPONENT_NAME/
       - name: Run Tests
         run: npm run build --prod --prefix ./$COMPONENT_NAME/
-      - name: Iniciar sesión en Heroku
-        uses: actions/heroku@v1.5.0
-        with:
-          email: ${{ secrets.HEROKU_EMAIL }}
-          api_key: ${{ secrets.HEROKU_API_KEY }}
       - name: Deploy
         uses: akhileshns/heroku-deploy@v3.12.13
         with:
@@ -33,3 +28,4 @@ jobs:
           heroku_app_name: frontend-comisarias
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
           appdir: frontend_comisarias/
+          folder_path: dist/frontend_comisarias
