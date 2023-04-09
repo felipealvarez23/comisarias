@@ -15,17 +15,23 @@ jobs:
       image: node:16-buster
       options: --user root
     steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Install Dependencies
         run: npm i --prefix ./$COMPONENT_NAME/
+
       - name: Run Tests
-        run: npm run build --prod --prefix ./$COMPONENT_NAME/
+        run: npm test --prefix ./$COMPONENT_NAME/
+
       - name: Deploy
-        uses: akhileshns/heroku-deploy@v3.12.13
-        with:
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: frontend-comisarias
-          heroku_email: ${{ secrets.HEROKU_EMAIL }}
-          appdir: frontend_comisarias/
-          folder_path: dist/frontend_comisarias
+        if: success()
+        run: aws s3 sync ./$COMPONENT_NAME/dist/$COMPONENT_NAME s3://frontend-comisarias
+
