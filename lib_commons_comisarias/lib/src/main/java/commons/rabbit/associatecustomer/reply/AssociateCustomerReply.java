@@ -1,6 +1,5 @@
-package commons.rabbit.createpm.reply;
+package commons.rabbit.associatecustomer.reply;
 
-import commons.exception.ErrorReply;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class CreatePMReply {
-    private CreatePMDataReply data;
-    private ErrorReply error;
+public class AssociateCustomerReply {
+    private String code;
+    private String message;
 }

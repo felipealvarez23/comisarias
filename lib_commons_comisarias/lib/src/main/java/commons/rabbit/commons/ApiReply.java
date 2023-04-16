@@ -1,4 +1,4 @@
-package commons.rabbit.createpm.reply;
+package commons.rabbit.commons;
 
 import commons.exception.ErrorReply;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class CreatePMReply {
-    private CreatePMDataReply data;
+public class ApiReply<T>{
+    private T data;
     private ErrorReply error;
 }
