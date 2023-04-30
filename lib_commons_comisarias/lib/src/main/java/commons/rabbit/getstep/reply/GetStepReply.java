@@ -1,16 +1,14 @@
-package commons.rabbit.commons;
+package commons.rabbit.getstep.reply;
 
-import commons.exception.ErrorReply;
+import commons.rabbit.commons.ErrorReply;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder(toBuilder = true)
-public class ApiReply<T>{
-    private T data;
+public class GetStepReply {
+    private GetStepDataReplay data;
     private ErrorReply error;
 }

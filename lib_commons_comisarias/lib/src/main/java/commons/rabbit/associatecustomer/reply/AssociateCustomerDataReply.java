@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class AssociateCustomerReply {
-    private AssociateCustomerDataReply data;
+public class AssociateCustomerDataReply {
+    private String code;
+    private String message;
 }

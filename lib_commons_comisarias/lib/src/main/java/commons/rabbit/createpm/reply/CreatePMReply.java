@@ -1,6 +1,6 @@
 package commons.rabbit.createpm.reply;
 
-import commons.exception.ErrorReply;
+import commons.rabbit.commons.ErrorReply;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

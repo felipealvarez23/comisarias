@@ -1,4 +1,4 @@
-package commons.rabbit.associatecustomer.reply;
+package commons.rabbit.commons;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class AssociateCustomerReply {
-    private AssociateCustomerDataReply data;
+public class ErrorReply {
+    private String code;
+    private String description;
+    private String severity;
 }
