@@ -11,6 +11,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class CreateCustomerDataReply {
+public class CreateCustomersDataReply {
     private List<CustomerReply> customers;
 }

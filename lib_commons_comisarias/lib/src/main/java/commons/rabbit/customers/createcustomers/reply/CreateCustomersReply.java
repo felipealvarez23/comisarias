@@ -1,6 +1,5 @@
 package commons.rabbit.customers.createcustomers.reply;
 
-import commons.rabbit.customers.createcustomers.query.CreateCustomersDataQuery;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,5 +10,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder(toBuilder = true)
 public class CreateCustomersReply {
-    private CreateCustomersDataQuery data;
+    private CreateCustomersDataReply data;
 }
