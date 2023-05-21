@@ -1,6 +1,6 @@
 package commons.rabbit.customers.createcustomers.query;
 
-import commons.rabbit.protectionmeasure.associatecustomer.query.CustomerQuery;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
