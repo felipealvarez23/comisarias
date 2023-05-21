@@ -1,4 +1,4 @@
-package commons.rabbit.createpm.query;
+package commons.rabbit.customers.createcustomers.query;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class CreatePMQuery {
-    private CreatePMDataQuery data;
+public class CreateCustomersQuery {
+    private CreateCustomersQuery data;
 }

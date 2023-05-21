@@ -1,4 +1,4 @@
-package commons.rabbit.createpm.reply;
+package commons.rabbit.protectionmeasure.createpm.query;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class CreatePMDataReply {
-    private String protectionMeasureId;
-    private String step;
+public class CreatePMDataQuery {
+    private String ip;
+    private String documentType;
+    private String documentNumber;
     private String type;
 }

@@ -1,4 +1,4 @@
-package commons.rabbit.createpm.query;
+package commons.rabbit.protectionmeasure.getstep.reply;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,9 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class CreatePMDataQuery {
-    private String ip;
-    private String documentType;
-    private String documentNumber;
+public class GetStepDataReplay {
+    private String status;
+    private String step;
     private String type;
 }

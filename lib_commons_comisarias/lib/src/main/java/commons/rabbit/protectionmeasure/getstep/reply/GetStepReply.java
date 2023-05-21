@@ -1,4 +1,4 @@
-package commons.rabbit.getstep.reply;
+package commons.rabbit.protectionmeasure.getstep.reply;
 
 import commons.rabbit.commons.ErrorReply;
 import lombok.AllArgsConstructor;

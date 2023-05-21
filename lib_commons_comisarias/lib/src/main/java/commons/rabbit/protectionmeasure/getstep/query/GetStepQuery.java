@@ -1,4 +1,4 @@
-package commons.rabbit.associatecustomer.query;
+package commons.rabbit.protectionmeasure.getstep.query;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class AssociateCustomerQuery {
-    private AssociateCustomerDataQuery data;
+public class GetStepQuery {
+    private GetStepDataQuery data;
 }

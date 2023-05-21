@@ -1,16 +1,16 @@
-package commons.rabbit.getstep.reply;
+package commons.rabbit.customers.createcustomers.reply;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class GetStepDataReplay {
-    private String status;
-    private String step;
-    private String type;
+public class CustomerReply {
+    private UUID customerId;
 }

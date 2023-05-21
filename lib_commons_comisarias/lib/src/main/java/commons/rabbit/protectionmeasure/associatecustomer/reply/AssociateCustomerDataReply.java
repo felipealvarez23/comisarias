@@ -1,4 +1,4 @@
-package commons.rabbit.associatecustomer.reply;
+package commons.rabbit.protectionmeasure.associatecustomer.reply;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

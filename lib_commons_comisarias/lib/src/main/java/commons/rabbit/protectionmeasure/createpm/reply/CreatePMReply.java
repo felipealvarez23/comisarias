@@ -1,4 +1,4 @@
-package commons.rabbit.createpm.reply;
+package commons.rabbit.protectionmeasure.createpm.reply;
 
 import commons.rabbit.commons.ErrorReply;
 import lombok.AllArgsConstructor;

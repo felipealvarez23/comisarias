@@ -1,4 +1,4 @@
-package commons.rabbit.getstep.query;
+package commons.rabbit.protectionmeasure.getstep.query;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

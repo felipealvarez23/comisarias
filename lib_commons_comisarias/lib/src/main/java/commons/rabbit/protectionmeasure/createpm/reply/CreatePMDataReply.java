@@ -1,16 +1,16 @@
-package commons.rabbit.associatecustomer.query;
+package commons.rabbit.protectionmeasure.createpm.reply;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class AssociateCustomerDataQuery {
-    private List<CustomerQuery> customerList;
+public class CreatePMDataReply {
+    private String protectionMeasureId;
+    private String step;
+    private String type;
 }
