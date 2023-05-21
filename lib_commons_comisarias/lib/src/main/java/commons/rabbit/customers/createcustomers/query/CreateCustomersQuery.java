@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder(toBuilder = true)
 public class CreateCustomersQuery {
-    private CreateCustomersQuery data;
+    private CreateCustomersDataQuery data;
 }
