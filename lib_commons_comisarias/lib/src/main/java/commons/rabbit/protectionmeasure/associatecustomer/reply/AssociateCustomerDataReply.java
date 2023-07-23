@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder(toBuilder = true)
 public class AssociateCustomerDataReply {
-    private String code;
-    private String message;
+    private String step;
+    private String status;
+    private String type;
 }
